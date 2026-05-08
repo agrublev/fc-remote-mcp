@@ -1,6 +1,6 @@
 {
   "name": "fc-remote-mcp",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Connect stdio-only MCP clients to remote MCP servers (HTTP/SSE) with OAuth — clone of mcp-remote.",
   "type": "module",
   "license": "MIT",
@@ -17,6 +17,7 @@
     "freedcamp"
   ],
   "bin": {
+    "fc-remote-mcp": "bin/fc-remote.js",
     "fc-remote": "bin/fc-remote.js",
     "fc-remote-client": "bin/fc-remote-client.js"
   },

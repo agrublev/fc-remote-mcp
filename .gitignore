@@ -5,3 +5,5 @@ package-lock.json
 *.log
 .env
 .env.local
+.idea
+.spec-workflow
