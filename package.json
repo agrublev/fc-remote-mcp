@@ -37,7 +37,7 @@
   "scripts": {
     "start": "node bin/fc-remote.js",
     "client": "node bin/fc-remote-client.js",
-    "prepublishOnly": "node -e \"import('./bin/fc-remote.js').catch(e=>{if(!String(e).includes('Usage'))throw e})\""
+    "prepublishOnly": "node --check bin/fc-remote.js && node --check bin/fc-remote-client.js"
   },
   "publishConfig": {
     "access": "public"
