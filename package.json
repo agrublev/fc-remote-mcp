@@ -1,0 +1,45 @@
+{
+  "name": "fc-remote-mcp",
+  "version": "0.1.0",
+  "description": "Connect stdio-only MCP clients to remote MCP servers (HTTP/SSE) with OAuth — clone of mcp-remote.",
+  "type": "module",
+  "license": "MIT",
+  "author": "agrublev <agrublev@gmail.com>",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-remote",
+    "stdio",
+    "sse",
+    "http",
+    "oauth",
+    "proxy",
+    "freedcamp"
+  ],
+  "bin": {
+    "fc-remote": "bin/fc-remote.js",
+    "fc-remote-client": "bin/fc-remote-client.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "open": "^10.1.0",
+    "zod": "^4.4.3"
+  },
+  "scripts": {
+    "start": "node bin/fc-remote.js",
+    "client": "node bin/fc-remote-client.js",
+    "prepublishOnly": "node -e \"import('./bin/fc-remote.js').catch(e=>{if(!String(e).includes('Usage'))throw e})\""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
